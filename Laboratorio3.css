@@ -1,3 +1,18 @@
 button,label,p{color:#fff}h1{color:#00f}h2{color:purple}h3{color:red}p{margin-bottom:10px}footer{color:gray;transition:color .3s}body{font-family:Arial,sans-serif;background-color:#333}h1,h2,h3{font-family:Roboto,sans-serif}header{background-color:#fff;justify-content:center;align-items:center;padding:20px}footer:hover{color:#555}a{color:#007bff;text-decoration:none}a:hover{text-decoration:underline}button{background-color:#007bff;border:none;padding:10px 20px;cursor:pointer}button:hover{background-color:#0056b3}
 
 /* comprimido con https://www.toptal.com/developers/cssminifier */
+
+/*
+Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?
+"el uso de ! important es una mala práctica y debería evitarse porque hace que el código sea más difícil de depurar al romper la cascada " Mi recomendación conociendolo recientemente sería evitar usarlo.
+https://developer.mozilla.org/es/docs/Web/CSS/Specificity
+
+Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado? Por que es importante tener un color que diferencie a la imagen del texto para que el usuario pueda distinguirlo de otros elementos. La legibilidad es lo más importante.
+https://desarrolloweb.com/articulos/1384.php
+
+Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt? A mi me gusta usar % porque es más fácil de manejar y de entender. Encaja en muchos escenarios y es bastante flexible al momento de implementarlo. 
+https://www.aluracursos.com/blog/guia-de-unidades-en-css
+
+¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio? En sí, por eficiencia y por su menor tamaño. Este archivo indica los estilos de todo el archivo HTML, si este es más eficiente por consecuencia la carga del archivo HTML lo será.
+https://www.cloudflare.com/es-es/learning/performance/how-to-minify-css/
+*/
