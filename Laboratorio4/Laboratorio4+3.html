@@ -5,7 +5,8 @@
     <title>Problema 3</title>
 </head>
 <body>
-    <script>
+  [1,2,3,4,5,0,-1,-2,-3,-4,-5,0,0,1,1,-1,-1]
+  <script>
         // funcion contador, regresa un arreglo con los numeros positivos, negaivos y ceros
         function contador(miArreglo) {
             let sumatoriaPositiva = 0;
@@ -32,11 +33,11 @@
         document.write("<tr><td> " + printer[0] + " </td><td> " + printer[1] + " </td><td> " + printer[2] + " </td></tr>");
         document.write("</table>");
 
-        /* Casos de prueba
-        [1,1,1,2,2,2,-3,-3,-3,-4,-4,-4,0,0,0,0] = 6, 6, 4
-        [-1,-2,-3,4,5,0,0,0,0,0,0,0,0,0,0,0] = 2, 3, 11
-        [1,2,3,4,5,6,7,8,9,10,11,12] = 12, 0, 0
-        */
+        document.write("Caso de prueba #1 [1,2,7,4,8,6,4,78,4,5,0,-1,-2,-12,-7,2,0,1,1,0,-1,-1] "+contador([1,2,7,4,8,6,4,78,4,5,0,-1,-2,-12,-7,2,0,1,1,0,-1,-1])+".<br>");
+        
+        document.write("Caso de prueba #2 [-1,-2,-3,4,5,0,0,0,0,0,0,0,0,0,0,0] "+contador([-1,-2,-3,4,5,0,0,0,0,0,0,0,0,0,0,0])+".<br>");
+        
+        document.write("Caso de prueba #3 [1,2,3,4,5,6,7,8,9,10,11,12] "+contador([1,2,3,4,5,6,7,8,9,10,11,12])+".<br>");
 
     </script>
   

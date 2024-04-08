@@ -5,6 +5,7 @@
     <title>Problema 4</title>
 </head>
 <body>
+    [[1,2,3],[4,5,6],[7,8,9]]<br>
     <script>
       //Función: promedios. Parámetros: Un arreglo de arreglos de números. Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.
         function promedios(miMatrix) {
@@ -28,13 +29,16 @@
         let miMatrix = [[1,2,3],[4,5,6],[7,8,9]];
         // that means that the first row is [1,2,3], the second row is [4,5,6], and the third row is [7,8,9]. 
         promedios(miMatrix); 
+       
+        document.write("<br>Caso de prueba #1<br>");
+        promedios([[1,12,9],[4,8,2],[8,5,8]]);
 
-        /* Casos de prueba [[1,2,3],[4,5,6],[7,8,9]];
-        [[1,12,9,5436],[4,8,2,11],[8,5,8,2,43]] = 1364.5, 6.25, 13.2
-        [[0,0,0,0],[1,2,3,4],[1,2],[3,4],[6,6,6,5,5]] = 0, 2.5, 1.5, 3.5, 5.6
-        [[0,1,0,0],[1,2,1,2],[3],[6,77,6]] = 0.25, 1.5, 3, 29.668
-        */
-
+        document.write("<br>Caso de prueba #2<br>"); 
+        promedios([[0,0,0],[1,2,4],[3,4,9]])
+      
+        document.write("<br>Caso de prueba #3<br>");
+        promedios([[0,1,0],[1,2,1,2],[6,7,6]]);
+      
     </script>
   
     <p>4. ¿Cómo se declara una variable con alcance local dentro de una función? <br>R. Con la palabra clave const o let . Por ejemplo, let y = 13 . Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. Fuente: Mozilla. (s/f). JavaScript: Gramática y tipos. Recuperado de https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types</p>

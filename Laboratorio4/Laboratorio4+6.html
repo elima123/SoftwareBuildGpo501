@@ -5,6 +5,7 @@
     <title>Problema 6</title>
 </head>
 <body>
+    [1,2,2,3,3,3,4,4,4,5]
     <script>
         // /!\ Elección de problema: 27. Remove Element /!\
         // Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
@@ -31,6 +32,21 @@
         [2,5,6,2,8,4,4,6,6,6] y 6 -> 2,5,2,8,4,4
         [9,4,6,2,6,3,9,5,3,8] y 9 -> 4,6,2,6,3,5,3,8
         */
+
+        document.write("<br><br>Caso de prueba #1 ''[2,5,6,2,8,4,4,6,6,6]'' numero 6.");
+        element = 6;
+        theArray = [2,5,6,2,8,4,4,6,6,6]; 
+        document.write("<br>El array sin el elemento " + element + " es: " + removeElement(theArray, element));
+
+        document.write("<br><br>Caso de prueba #2 ''[9,4,6,2,6,3,9,5,3,8]'' numero 9.");
+        element = 9
+        theArray = [9,4,6,2,6,3,9,5,3,8]; 
+        document.write("<br>El array sin el elemento " + element + " es: " + removeElement(theArray, element));
+
+        document.write("<br><br>Caso de prueba #3 ''[1,6,4,8,9,3,2,5,7,2,8,0,9,8,3,3,3,5,0,2,6]'' numero 3.");
+        element = 3;
+        theArray = [1,6,4,8,9,3,2,5,7,2,8,0,9,8,3,3,3,5,0,2,6]; 
+        document.write("<br>El array sin el elemento " + element + " es: " + removeElement(theArray, element));
       
     </script>
 </body>
