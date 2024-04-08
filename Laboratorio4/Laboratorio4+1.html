@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 1</title>
+</head>
+<body>
+    <script>
+        // parseInt trasnforma string a numero entero 
+        // prompt pide un dato al usuario
+        let numInput = parseInt(prompt("Ingrese un número:"));
+
+        // condicion para numeros positivos
+        if (numInput > 0) {
+        
+            // implementa etiqueta <table> "as built in"
+            document.write("<table>");
+          
+            // implementa header de la tabla a través de etiquetas
+            document.write("<tr><th>Número </th><th>Cuadrado </th><th>Cubo  </th></tr>");
+          
+            // funcion for que implementa cada linea escribiendo etiquetas + operacion
+            for (let i = 1; i <= numInput; i++) {
+                document.write("<tr><td>" + i + "</td><td>" + i*i + "</td><td>" + i*i*i + "</td></tr>");
+            }
+
+            // cierra etiqueta <table> "as built in"
+            document.write("</table>");
+          
+        // En caso de no ser un numero positivo, indicar
+        } else {
+            alert("El número ingresado no es válido.");
+            document.write("El número ingresado no es válido.");
+        }
+
+        /* Casos de prueba
+        El número 7 debería dar 343.
+        El número -5 debería dar "El número ingresado no es válido."
+        El número 0 debería dar "El número ingresado no es válido."
+        El número 12 deberia dar 1728.
+        */
+      
+    </script>
+
+    <p>1. ¿Qué diferencias y semejanzas hay entre Java y JavaScript? R. Pues el desarrollo de Java es más complejo, me recuerda mucho a C++ el programar en Java. JavaScript siento que es la versión de Java que se adaptó a las necesidades de aplicaciones web con la trifecta de HTML + JS + CSS. Realmente son muy diferentes al programar. En cuanto a semejanzas podriamos decir que ambos pueden ejercer el paradigma de programación orientado a objetos.</p>
+</body>
+</html>

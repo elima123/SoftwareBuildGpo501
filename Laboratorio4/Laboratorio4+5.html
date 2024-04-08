@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 5</title>
+</head>
+<body>
+    <script>
+      //Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.
+        function inverso(miNumero) {
+            // imprimir realizando split que separa el string en caracteres dentro de un array, reverse que invierte dicho array, y luego join que une los elementos del array en un string de vuelta.
+            document.write("String en reversa: " + miNumero.split('').reverse().join(''));
+        }
+
+        // 123456789 --> 987654321
+        let miNumero = "123456789";
+        inverso(miNumero);
+
+        /* Casos de prueba: 
+        esteEsUnString -> gnirtsuEste
+        revolLAaVeuQecerap -> pareceQueVaALlover
+        78978923232 -> 2323289789
+        sapmoCsoLnoCsohcoJsonUremoCAyov -> voyAComerUnosJochosConLosCompas
+        */
+      
+    </script>
+        
+  
+    <p>5. ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?<br>R. El uso de variables globales no es aconsejable a pesar de que parezca útil y cómodo: Disminuye la legibilidad. Su uso puede producir efectos colaterales, al producirse alteraciones no previstas de su valor en una parte del programa que afectan a su uso en otra zona. Fuente: Universidad de Valladolid. (s/f). Ámbito de las variables. Recuperado de https://www2.eii.uva.es/fund_inf/cpp/temas/2_tipos_variables/ambito_variables.html</p>
+  
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 3</title>
+</head>
+<body>
+    <script>
+        // funcion contador, regresa un arreglo con los numeros positivos, negaivos y ceros
+        function contador(miArreglo) {
+            let sumatoriaPositiva = 0;
+            let sumatoriaNegativa = 0; 
+            let ceros = 0;
+            for (let item of miArreglo) {
+              if (item > 0) {
+                sumatoriaPositiva ++;
+              } else if (item < 0) {
+                sumatoriaNegativa ++;
+              } else {
+                ceros ++;
+              }
+            }
+          return [sumatoriaPositiva, sumatoriaNegativa, ceros];
+        }
+        // se escribe un arreglo de ejemplo (este ejemplo da 7, 7, 3)
+        let miArreglo = [1,2,3,4,5,0,-1,-2,-3,-4,-5,0,0,1,1,-1,-1];
+        // se guarda el resultado de la funcion
+        let printer = contador(miArreglo);
+        // se imprime el resultado
+        document.write("<table>");
+        document.write("<tr><th>Positivos </th><th>Negativos </th><th>Ceros </th></tr>");
+        document.write("<tr><td> " + printer[0] + " </td><td> " + printer[1] + " </td><td> " + printer[2] + " </td></tr>");
+        document.write("</table>");
+
+        /* Casos de prueba
+        [1,1,1,2,2,2,-3,-3,-3,-4,-4,-4,0,0,0,0] = 6, 6, 4
+        [-1,-2,-3,4,5,0,0,0,0,0,0,0,0,0,0,0] = 2, 3, 11
+        [1,2,3,4,5,6,7,8,9,10,11,12] = 12, 0, 0
+        */
+
+    </script>
+  
+    <p>3. ¿Qué métodos tienen los arreglos? (Menciona al menos 5*) <br>R. push() – Inserta un elemento al final del arreglo.
+    unshift() – Inserta un elemento al inicio del arreglo.
+    pop() – Remueve un elemento del final del arreglo.
+    shift() – Remueve un elemento del principio del arreglo.
+    slice() – Crea una copia sombra del arreglo.
+    Fuente: FreeCodeCamp. (s/f). El manual de arreglos en JavaScript. Recuperado de https://www.freecodecamp.org/espanol/news/el-manual-de-arreglos-en-javascript/</p>
+  
+</body>
+</html>

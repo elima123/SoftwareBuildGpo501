@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 2</title>
+</head>
+<body>
+    <script>
+        // Consigue 2 numeros aleatorios
+        let a = Math.floor(Math.random() * 10);
+        let b = Math.floor(Math.random() * 10);
+
+        // Comienza el timer para tiempo de respuesta 
+        let startTime = new Date().getTime();
+
+        // Pide el número de la suma y toma el tiempo
+        let numInput = parseInt(prompt("Ingrese la suma de " + a + " + " + b + ": "));
+        let endTime = new Date().getTime();
+        let timeTaken = (endTime - startTime) / 1000;
+
+        // Comprueba la respuesta y muestra la alerta
+        if (numInput === a + b) {
+            alert("Respuesta correcta. Tiempo tomado: " + timeTaken + " segundos.");
+        } else {
+            alert("Respuesta incorrecta. La respuesta correcta es: " + (a + b) + ". Tiempo tomado: " + timeTaken + " segundos.");
+        }
+
+        // Print table
+        document.write("<table>");
+        document.write("<tr><th>Primer número</th><th>Segundo número</th><th>Su respuesta</th></tr>");
+        document.write("<tr><td>" + a + "</td><td>" + b + "</td><td>" + numInput +"</td></tr>");
+        document.write("</table>");
+
+        /* Casos de prueba
+        9 + 5 y usted escribe 123213 debería decir "Respuesta incorrecta. La respuesta correcta es: 14."
+        6 + 1 y usted escribe 7 debería decir "Respuesta correcta."
+        3 + 3 y usted escribe 6 debería decir "Respuesta correcta."
+        */
+
+    </script>
+
+    <p>2. ¿Qué métodos tiene el objeto Date? <br>R. getDate() Devuelve el día del mes (de 1 a 31)<br>getDay() Devuelve el día de la semana (de 0 a 6)<br>getFullYear() Devuelve el año<br>getHours() Devuelve la hora (de 0 a 23)<br>getMilliseconds() Devuelve los milisegundos (de 0 a 999)<br>Fuente: Aula Script. (s.f.). Lenguaje de programación JavaScript: Objetos Date. Recuperado de https://www.aulascript.com/lenguaje/objetos/date/index.htm</p>
+</body>
+</html>
