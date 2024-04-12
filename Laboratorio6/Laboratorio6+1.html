@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1> Validad-Or-Contraseña-3000</h1>
+  <!-- Inicar formulario de contraseña -->
+  <form id="contraseñaForm">
+    <!-- Caja de contraseña: -->
+    <label for="contraseña">Contraseña:</label>
+    <input type="contraseña" id="contraseña" required>
+    <br>
+    <!-- Caja de confirmaContraseña: -->
+    <label for="confirmaContraseña">Confirma contraseña:</label>
+    <input type="contraseña" id="confirmaContraseña" required>
+    <br>
+    <!-- Boton para activar la validación -->
+    <button type="submit">Validar!</button>
+  </form>
+  <!-- Se establece como un mini print que se referencia en js más abajo -->
+  <div id="message"></div>
+  <p onmouseover="changeColor(this)" onmouseout="resetColor(this)"><span class="exclamation">/!\</span> <span
+      class="hidden-text">Este es un texto oculto. Muy bien! Me encontraste.</span></p>
+
+
+  <p>Intente colocar el mouse sobre los parrafos :)</p>
+  <p onmouseover="changeColor(this)" onmouseout="resetColor(this)">¿Por qué es una buena práctica usar JavaScript para
+    checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? Si la información está en el
+    formato correcto, la aplicación permite que los datos se envíen al servidor y (en general) que se guarden en una
+    base de datos; si la información no está en el formato correcto, da al usuario un mensaje de error que explica lo
+    que debe corregir y le permite volver a intentarlo. Fuente: Mozilla. (2023). Validación de formularios. MDN Web
+    Docs. Recuperado el 11 de abril de 2024, de https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation</p>
+
+  <p onmouseover="changeColor(this)" onmouseout="resetColor(this)">Cómo puedes saltarte la seguridad de validaciones
+    hechas con JavaScript? Al paracer sí, se puede saltar la seguridad de las validaciones hechas con JavaScript
+    utilizando herramientas de desarrollo del navegador que permiten modificar el código JavaScript en tiempo real.
+    Además, los usuarios avanzados pueden deshabilitar JavaScript en su navegador, lo que evitará que se ejecuten las
+    validaciones. Fuente: ADA. (09/12/2020). Cómo saltarse la validación HTML5 de un formulario. ADA. Recuperado el 11
+    de abril de 2024, de https://didacticode.com/como-saltarse-validacion-html5-formulario</p>
+
+  <p onmouseover="changeColor(this)" onmouseout="resetColor(this)">Si te puedes saltar la seguridad de las validaciones
+    de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica? Aunque es posible saltarse las
+    validaciones de JavaScript, es una buena práctica utilizarlas porque proporcionan una capa adicional de validación
+    para la mayoría de los usuarios que no intentarán evadir las validaciones. Además, las validaciones del lado del
+    cliente pueden detectar errores de forma rápida y permitir correcciones instantáneas sin tener que esperar la
+    respuesta del servidor. Fuente: Mozilla. (2023). Validación de formularios. MDN Web Docs. Recuperado el 11 de abril
+    de 2024, de https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation</p>
+
+  <script>
+    // Pues esto es para agregar el evento de mouseover
+    function changeColor(element) {
+      //element.classList.add('red');
+      element.classList.add('red');
+    }
+    // Y claro, reiniciar el color para dar el efecto de pastel
+    function resetColor(element) {
+      //element.classList.remove('red');
+      element.classList.remove('red');
+    }
+
+
+    // Obtener referencia al formulario
+    let formulario = document.getElementById('contraseñaForm');
+
+    // Agregar el boton para que detecte la acción de validar
+    formulario.addEventListener('submit', function (event) {
+      // Prevenir el comportamiento predeterminado de envío del formulario
+      event.preventDefault(); // más que nada para que no se recargue tantas veces la pagina
+
+      // Obtener los valores de los campos de contraseña y confirmación de contraseña
+      let contraseña = document.getElementById('contraseña').value;
+      let confirmaContraseña = document.getElementById('confirmaContraseña').value;
+
+      // Comparar las contraseñas
+      if (contraseña === confirmaContraseña) {
+        // Mostrar mensaje si las contraseñas coinciden
+        document.getElementById('message').innerText = "Las contraseñas coinciden.";
+      } else {
+        // Mostrar mensaje si las contraseñas no coinciden
+        document.getElementById('message').innerText = "Las contraseñas no coinciden.";
+      }
+      // se utiliza message porque <div id="message"></div> 
+
+      // muy intuitivo, simplemente lee y compara las contraseñas
+    });
+  </script>
+
+</body>
+
+</html>

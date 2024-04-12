@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 class="blue">MiWalmartOnline</h1>
+  <h3 class="blue">Todo lo que necesita para hacer tortas. </h3>
+
+  <div class="product">
+    <h2>Jamón || $175 el kilo</h2>
+    <p>Introduzca los gramos que desea comprar.</p>
+    <input type="number" id="gramosDeJamón" value="0" min="0" max="10000">
+  </div>
+
+  <div class="product">
+    <h2>Queso || $225 el kilo</h2>
+    <p>Introduzca los gramos que desea comprar.</p>
+    <input type="number" id="gramosDeQueso" value="0" min="0" max="10000">
+  </div>
+
+  <div class="product">
+    <h2>Aguacate || $75 el kilo</h2>
+    <p>Introduzca los gramos que desea comprar.</p>
+    <input type="number" id="gramosDeAguacate" value="0" min="0" max="10000">
+  </div>
+
+  <button onclick="calcularPrecioTotal()">Calcular</button>
+  <p>Precio total: <span id="precioTotal">$0</span></p>
+  <p>IVA: <span id="iva">$0</span></p>
+
+  <script>
+    function calcularPrecioTotal() {
+      let precioJamón = 175;
+      let precioQueso = 225;
+      let precioAguacate = 75;
+
+      let gramosDeJamón = parseInt(document.getElementById('gramosDeJamón').value);
+      let gramosDeQueso = parseInt(document.getElementById('gramosDeQueso').value);
+      let gramosDeAguacate = parseInt(document.getElementById('gramosDeAguacate').value);
+
+      let totalJamón = (precioJamón / 1000) * gramosDeJamón;
+      let totalQueso = (precioQueso / 1000) * gramosDeQueso;
+      let totalAguacate = (precioAguacate / 1000) * gramosDeAguacate;
+
+      let total = totalJamón + totalQueso + totalAguacate;
+      let iva = total * 0.16; // PQ 16% DE IVA XD MEXICO 2024
+
+      document.getElementById('precioTotal').innerText = "$" + total.toFixed(2);
+      document.getElementById('iva').innerText = "$" + iva.toFixed(2);
+    }
+  </script>
+</body>
+
+</html>
