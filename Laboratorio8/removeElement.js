@@ -1,0 +1,67 @@
+// EJECUTAR EN SHELL: node removeElement.js
+
+// /!\ Elección de problema: 27. Remove Element /!\
+
+// Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+function removeElement(theArray, element) {
+  let theIndex = theArray.indexOf(element);
+  while (theIndex !== -1) {
+    // es "!==" no "!=" ni "=!"
+    theArray.splice(theIndex, 1);
+    theIndex = theArray.indexOf(element);
+  }
+  return theArray;
+}
+
+// Declaracion de los valores
+let element = 3;
+let theArray = [1, 2, 2, 3, 3, 3, 4, 4, 4, 5];
+// Deberia dar 1,2,2,4,4,4,5
+
+// Acciona e imprime
+console.log(
+  "El array sin el elemento " +
+    element +
+    " es: " +
+    removeElement(theArray, element),
+);
+
+/* Casos de prueba: 
+    [1,2,2,3,3,3,4,4,4,5] y 3 -> 1,2,2,4,4,4,5
+    [2,5,6,2,8,4,4,6,6,6] y 6 -> 2,5,2,8,4,4
+    [9,4,6,2,6,3,9,5,3,8] y 9 -> 4,6,2,6,3,5,3,8
+    */
+
+console.log("Caso de prueba #1 ''[2,5,6,2,8,4,4,6,6,6]'' numero 6.");
+element = 6;
+theArray = [2, 5, 6, 2, 8, 4, 4, 6, 6, 6];
+console.log(
+  "El array sin el elemento " +
+    element +
+    " es: " +
+    removeElement(theArray, element),
+);
+
+console.log("Caso de prueba #2 ''[9,4,6,2,6,3,9,5,3,8]'' numero 9.");
+element = 9;
+theArray = [9, 4, 6, 2, 6, 3, 9, 5, 3, 8];
+console.log(
+  "El array sin el elemento " +
+    element +
+    " es: " +
+    removeElement(theArray, element),
+);
+
+console.log(
+  "Caso de prueba #3 ''[1,6,4,8,9,3,2,5,7,2,8,0,9,8,3,3,3,5,0,2,6]'' numero 3.",
+);
+element = 3;
+theArray = [1, 6, 4, 8, 9, 3, 2, 5, 7, 2, 8, 0, 9, 8, 3, 3, 3, 5, 0, 2, 6];
+console.log(
+  "El array sin el elemento " +
+    element +
+    " es: " +
+    removeElement(theArray, element),
+);
+
+// asi es :)
