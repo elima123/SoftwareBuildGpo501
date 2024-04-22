@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const fs = require("fs");
+
 
 router.get("/", (request, response, next) => {
   response.write(`
@@ -30,27 +32,34 @@ router.get("/", (request, response, next) => {
   response.redirect("/mensaje-recibido");
 });
 
+
 router.post("/", (request, response) => {
-  // se crea una variable para guardar la informacion que viene del usuario
-  let body = "";
-  request.on("data", (chunk) => {
-    body += chunk.toString(); // convertir el buffer a string
-  });
-  request.on("end", () => { 
-    const formData = new URLSearchParams(body); //ECMAScript estándar
-    let num1 = parseInt(formData.get("num1"));
-    let num2 = parseInt(formData.get("num2"));
-    let num3 = parseInt(formData.get("num3"));
+    let body = "";
+    request.on("data", (chunk) => {
+        body += chunk.toString();
+    });
+    request.on("end", () => {
+        const formData = new URLSearchParams(body);
+        let num1 = parseInt(formData.get("num1"));
+        let num2 = parseInt(formData.get("num2"));
+        let num3 = parseInt(formData.get("num3"));
 
-    let suma = num1 + num2 + num3;
+        let suma = num1 + num2 + num3;
 
-    // se avisa en la consola que se ha recibido la informacion
-    console.log("La suma de los numeros es: " + suma);
-    console.log("Datos recibidos y procesados correctamente.\n");
+        // Guardar los datos en un archivo de texto
+        fs.appendFile("registros.txt", `${num1}\n${num2}\n${num3}\n---\n`, (err) => {
+            if (err) {
+                console.error("Error al guardar los datos:", err);
+                return;
+            }
+            console.log("Datos guardados correctamente en registros.txt");
+        });
 
-    // Redireccionar a /mensaje-recibido con la suma como parámetro en la URL
-    response.redirect(`/mensaje-recibido?suma=${suma}`);
-  });
+        console.log("La suma de los números es: " + suma);
+        console.log("Datos recibidos y procesados correctamente.\n");
+
+        response.redirect(`/mensaje-recibido?suma=${suma}`);
+    });
 });
 
 module.exports = router;
