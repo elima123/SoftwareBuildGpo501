@@ -22,7 +22,7 @@ app.get("/", (request, response, next) => {
   response.end();
 });
 
-// importancion de modulos individuales
+// importacion de modulos individuales
 const mirutaunoRouter = require("./rutas/mirutauno");
 app.use("/mirutauno", mirutaunoRouter);
 const mirutadosRouter = require("./rutas/mirutados");
