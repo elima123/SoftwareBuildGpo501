@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('partials/cabecera.html') %>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Introduzca el nombre del juego que desea guardar.</h1>
+      <form action="/createGame" method="POST">
+          <label for="gameName">Nombre del Juego:</label>
+          <input type="text" id="gameName" name="gameName">
+          <button type="submit">Guardar Juego</button>
+      </form>
+      <%- include('partials/botonRegresar.html') %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <%- include('partials/cabecera.html') %>
+  </head>
+<body>
+  <div class="container">
+    <h1>Lista de todos los juegos guardados.</h1>
+    <ul>
+        <% games.forEach(function(game) { %>
+            <h3><li><%= game.attribute_1 %></li></h3>
+        <% }); %>
+    </ul>
+    <%- include('partials/botonRegresar.html') %>
+  </div>
+</body>
+</html>   
