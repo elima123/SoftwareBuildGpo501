@@ -1,0 +1,34 @@
+/*
+¿En qué consiste el control de acceso basado en roles?
+
+El control de acceso basado en roles (RBAC, por sus siglas en inglés) es un modelo de seguridad que regula el acceso a los recursos informáticos en función de los roles asignados a los usuarios dentro de una organización. En lugar de asignar permisos directamente a usuarios individuales, se asignan a roles específicos y luego se asignan esos roles a los usuarios. Esto simplifica la administración de permisos, ya que los cambios en los permisos se pueden hacer actualizando los roles en lugar de los usuarios individuales.
+
+Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las ventajas y desventajas de cada uno con respecto al control de acceso.
+
+Sistema que aplica RBAC: Microsoft Active Directory
+Microsoft Active Directory es un servicio de directorio utilizado por sistemas operativos Windows que implementa RBAC para controlar el acceso a recursos como archivos, impresoras, aplicaciones y otros servicios de red. Los administradores pueden asignar usuarios a grupos específicos que tienen roles predefinidos y luego definir los permisos de acceso para esos grupos. Por ejemplo, un usuario puede pertenecer al grupo de "Usuarios Financieros", que tiene acceso a los archivos financieros, pero no al grupo de "Usuarios de Recursos Humanos".
+
+Ventajas de RBAC en Active Directory:
+
+Simplifica la administración de permisos: Los administradores pueden administrar permisos en función de roles predefinidos en lugar de usuarios individuales, lo que facilita la gestión y reduce la posibilidad de errores.
+Mejora la seguridad: RBAC reduce la posibilidad de errores de permisos al limitar el acceso a recursos solo a través de roles específicos, lo que ayuda a proteger los datos sensibles y los sistemas de la organización.
+Desventajas de RBAC en Active Directory:
+
+Complejidad inicial: Configurar adecuadamente los roles y los permisos puede requerir una planificación cuidadosa y puede resultar complejo en entornos grandes.
+Rigidez: Puede ser difícil manejar situaciones donde un usuario necesita permisos específicos que no encajan fácilmente en los roles existentes.
+Sistema que no aplica RBAC: Sistema de Archivos Unix/Linux
+Los sistemas de archivos Unix/Linux tradicionales no aplican RBAC de manera nativa y, en su lugar, utilizan un modelo de permisos basado en usuarios y grupos. Cada archivo y directorio tiene un propietario y un grupo asociado, y se asignan permisos específicos a estos dos tipos de entidades.
+
+Ventajas del sistema de archivos Unix/Linux:
+
+Flexibilidad: El modelo de permisos basado en usuarios y grupos permite una gran flexibilidad para asignar permisos específicos a archivos y directorios, adaptándose a las necesidades de cada situación.
+Simplicidad: Para entornos más pequeños o menos complejos, el modelo de permisos tradicional puede ser más fácil de entender y administrar que un sistema RBAC.
+Desventajas del sistema de archivos Unix/Linux:
+
+Mayor riesgo de errores: La asignación de permisos directamente a usuarios y grupos puede aumentar el riesgo de errores de administración, especialmente en entornos grandes o en constante cambio.
+Difícil de escalar: A medida que crece la organización o la complejidad de los sistemas, puede volverse más difícil administrar y mantener un control preciso sobre los permisos de acceso. Esto puede llevar a situaciones de seguridad laxas o incoherentes.
+
+
+
+
+*/
