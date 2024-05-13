@@ -1,0 +1,6 @@
+¿Qué otras formas de autentificación existen?
+Autenticación de dos factores (2FA): Esta técnica requiere que los usuarios proporcionen dos tipos de evidencia de su identidad para acceder a una cuenta. Por lo general, implica algo que el usuario sabe (como una contraseña) y algo que posee (como un código generado por una aplicación de autenticación en el teléfono móvil).
+
+Autenticación biométrica: Utiliza características físicas únicas de un individuo, como la huella digital, el escaneo facial o el escaneo de iris, para verificar su identidad.
+
+Tokens de acceso: En lugar de almacenar credenciales de inicio de sesión en el cliente, se pueden utilizar tokens de acceso que se generan después de la autenticación exitosa. Estos tokens se pueden incluir en cada solicitud posterior para demostrar la autenticación del usuario.
