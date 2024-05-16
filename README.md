@@ -7,6 +7,6 @@ Recuerda solucionar los laboratorios con esto: https://github.com/black4ninja/pr
 2. Run powershell as admin
 3. Turn on Scripts: Set-ExecutionPolicy RemoteSigned
 4. cd C:\Users\Usuario\desktop\develop
-5. "npm install" ó (npm install express ejs body-parser pm2 mariadb -g) +o (npm init -y)
+5. "npm install" seguido de "npm install -g" seguido de fix seguido de "npm i nodemon"
 6. Ejecuta todo desde powershell Run As Administrator
 7. Turn off Scripts: Set-ExecutionPolicy Restricted
